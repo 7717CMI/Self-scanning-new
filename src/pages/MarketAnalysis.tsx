@@ -2041,7 +2041,7 @@ export function MarketAnalysis({ onNavigate }: MarketAnalysisProps) {
                     options={cagrFilterOptions.regions}
                   />
                   <FilterDropdown
-                    label="By Solution Type"
+                    label="By Product Type"
                     value={cagrFilters.solutionType}
                     onChange={(value) => setCagrFilters({ ...cagrFilters, solutionType: value as string[] })}
                     options={cagrFilterOptions.solutionTypes}
