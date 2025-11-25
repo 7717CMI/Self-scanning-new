@@ -68,7 +68,7 @@ export function Home({ onNavigate }: HomeProps) {
           GLOBAL RETAIL SELF SCANNING SOLUTION MARKET DATABASE
         </h1>
         <p className="text-lg text-electric-blue dark:text-cyan-accent">
-          Customer Intelligence Database
+          Customer Intelligence and Market Analysis Database
         </p>
       </motion.div>
 
