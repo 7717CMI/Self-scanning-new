@@ -16,7 +16,7 @@ interface ShovelMarketData {
   crossRetailLevel1?: string // e.g., Fixed-Position Self-Scanning Kiosks
   crossRetailLevel2?: string // e.g., Single-Plane Self-Scanning Kiosks
   crossRetailLevel3?: string // e.g., Supermarkets & Hypermarkets
-  // Hierarchical fields for By Solution Type
+  // Hierarchical fields for By Product Type
   solutionType?: string
   // Hierarchical fields for By Technology
   technologyType?: string
@@ -51,7 +51,7 @@ const generateComprehensiveData = (): ShovelMarketData[] => {
 
   const segments = [
     "By Component",
-    "By Solution Type",
+    "By Product Type",
     "Cross - By Product Type and Technology",
     "By Technology",
     "By Retail Format",
@@ -211,7 +211,7 @@ const generateComprehensiveData = (): ShovelMarketData[] => {
     ]
   }
 
-  // Solution types for By Solution Type
+  // Solution types for By Product Type
   const solutionTypes = [
     "Fixed-Position Self-Scanning Kiosks",
     "Single-Plane Self-Scanning Kiosks",
@@ -372,7 +372,7 @@ const generateComprehensiveData = (): ShovelMarketData[] => {
                     if (level2Obj.level3Options.length > 0) {
                       crossRetailLevel3 = level2Obj.level3Options[Math.floor(seededRandom() * level2Obj.level3Options.length)]
                     }
-                  } else if (segment === "By Solution Type") {
+                  } else if (segment === "By Product Type") {
                     solutionType = solutionTypes[Math.floor(seededRandom() * solutionTypes.length)]
                   } else if (segment === "By Technology") {
                     technologyType = technologyTypes[Math.floor(seededRandom() * technologyTypes.length)]

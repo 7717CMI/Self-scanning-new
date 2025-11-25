@@ -72,7 +72,7 @@ export function MarketAnalysis({ onNavigate }: MarketAnalysisProps) {
   // Separate filters for attractiveness tab
   const [attractivenessFilters, setAttractivenessFilters] = useState({
     region: ["North America", "Europe"] as string[],
-    segment: ["By Component", "By Solution Type"] as string[],
+    segment: ["By Component", "By Product Type"] as string[],
   })
 
   // Separate filters for Y-o-Y/CAGR Analysis tab
@@ -1355,7 +1355,7 @@ export function MarketAnalysis({ onNavigate }: MarketAnalysisProps) {
                           })}
                         />
                       )
-                    } else if (filters.segment[0] === "By Solution Type") {
+                    } else if (filters.segment[0] === "By Product Type") {
                       return (
                         <SimpleListFilter
                           label="Segment Types"
@@ -1457,7 +1457,7 @@ export function MarketAnalysis({ onNavigate }: MarketAnalysisProps) {
                               />
                             </div>
                           )}
-                          {filters.segment.includes("By Solution Type") && (
+                          {filters.segment.includes("By Product Type") && (
                             <div>
                               <SimpleListFilter
                                 label="Solution Types"
