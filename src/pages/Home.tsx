@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Users, ArrowRight, LucideIcon } from 'lucide-react'
+import { Users, ArrowRight, LucideIcon, TrendingUp } from 'lucide-react'
 import { DemoNotice } from '../components/DemoNotice'
 
 interface HomeProps {
@@ -16,6 +16,13 @@ interface AnalysisTile {
 
 export function Home({ onNavigate }: HomeProps) {
   const analysisTiles: AnalysisTile[] = [
+    {
+      title: "Market Analysis",
+      description: "Market size, growth trends, and comprehensive analysis for Global Retail Self Scanning Solution Market",
+      icon: TrendingUp,
+      id: "MarketAnalysis",
+      gradient: "#0075FF",
+    },
     {
       title: "Customer Intelligence",
       description: "Customer database and insights for Global Retail Self Scanning Solution Market",
@@ -81,7 +88,7 @@ export function Home({ onNavigate }: HomeProps) {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-6 mb-8 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-5xl mx-auto">
           {analysisTiles.map((tile) => {
             const TileIcon = tile.icon
             
